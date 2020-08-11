@@ -22,18 +22,18 @@ jobs:
   
       - name: Test
         run: |
-          docker build -t meirthing02/react-test -f ./client/Dockerfile.dev ./client
-          docker run meirthing02/react-test npm test -- --coverage --watchAll=false
+          docker build -t meirkell/react-test -f ./client/Dockerfile.dev ./client
+          docker run meirkell/react-test npm test -- --coverage --watchAll=false
 
       - name: Build Docker Images
         run: |
-          docker build -t meirthing02/multi-client ./client
-          docker build -t meirthing02/multi-nginx ./nginx
-          docker build -t meirthing02/multi-server ./server
-          docker build -t meirthing02/multi-worker ./worker
-          docker push meirthing02/multi-client
-          docker push meirthing02/multi-nginx
-          docker push meirthing02/multi-server
-          docker push meirthing02/multi-worker
+          docker build -t meirkell/multi-client ./client
+          docker build -t meirkell/multi-nginx ./nginx
+          docker build -t meirkell/multi-server ./server
+          docker build -t meirkell/multi-worker ./worker
+          docker push meirkell/multi-client
+          docker push meirkell/multi-nginx
+          docker push meirkell/multi-server
+          docker push meirkell/multi-worker
 
 
