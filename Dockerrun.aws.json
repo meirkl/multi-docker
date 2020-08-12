@@ -24,7 +24,7 @@
     },
     {
       "name": "nginx",
-      "image": "meirkell/multi-mginx",
+      "image": "meirkell/multi-nginx",
       "hostname": "mginx",
       "essential": true,
       "portMappings": [
